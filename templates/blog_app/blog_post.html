@@ -1,0 +1,110 @@
+
+  {% extends "blog_app/blog_base.html" %}
+{% block title %}{{ post.title }}{% endblock title %}
+{% block content %}
+
+<section class="bg-gray-900 lg:bg-single_blog bg-cover bg-no-repeat bg-right-bottom py-5 lg:py-10">
+    <div class="max-w-screen-xl items-center justify-between mx-auto px-4 pt-5 pb-0 md:pt-10">
+        <h1 class="bg-blue-100 text-blue-700 rounded-full px-1 py-0.5 text-xs w-32 text-center mb-5">{{ post.category }}</h1>
+      <h2 class="pb-2 text-2xl font-bold text-white md:text-4xl xl:text-5xl my-3 lg:w-2/3">
+        {{ post.title }}
+      </h2>
+      <hr class="h-[2px] border-0 bg-gray-700 lg:w-2/3">
+
+      <div class="flex flex-row space-x-3 items-center py-2 mt-5">
+        <img class="rounded-full w-12" src="https://media-ccu1-2.cdn.whatsapp.net/v/t61.24694-24/308922090_476956374236404_226430469107065438_n.jpg?ccb=11-4&oh=01_AdToBCG43Vmmuhnw_dboR24Z87iEWG-jqve31BTWyC4E3g&oe=6582E0EF&_nc_sid=e6ed6c&_nc_cat=105" alt="Ishtiak Khan">
+        
+        <div class="flex flex-row">
+          <h1 class="text-sm font-semibold text-gray-200">Ishtiak Khan .</h1>
+          <h1 class="text-sm font-light text-gray-300"> 20 May. 2023</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="max-w-screen-xl items-center justify-between mx-auto px-4 pt-5 pb-0 md:pt-10">
+
+        <div class="flex flex-col md:flex-row w-full md:space-x-3 lg:space-x-5 xl:space-x-8">
+            <div class="flex flex-col w-full md:w-2/3 text-lg lg:text-xl leading-relaxed lg:leading-loose text-justify">
+                {{ post.body|safe }}
+                <img src="/{{ post.blog_image }}" alt="{{ post.title }}" class="w-full rounded-3xl ">
+            </div>
+
+            <div class="flex flex-col w-full md:w-1/3 space-y-4 md:space-y-8 mt-10 md:mt-0">
+
+            <div class="bg-gray-100 rounded-3xl p-5">
+                <h1 class="text-xl text-gray-800 font-bold mb-3">💡 All Categories</h1>
+                <hr class="h-[1px] border-0 bg-gray-300">
+                <ul class="mt-5 space-y-1 font-semibold text-md">
+                    <li class="ml-5 text-cyan-500"><a href="/blog/blog_post/category/physics-1st-paper/">Physics 1st Paper</a></li>
+                    <li class="ml-5 text-cyan-500"><a href="/blog/blog_post/category/physics-2nd-paper/">Physics 2nd Paper</a></li>
+                    <li class="ml-5 text-purple-500"><a href="/blog/blog_post/category/chemistry-1st-paper/">Chemistry 1st Paper</a></li>
+                    <li class="ml-5 text-purple-500"><a href="/blog/blog_post/category/chemistry-2nd-paper/">Chemistry 2nd Paper</a></li>
+                    <li class="ml-5 text-indigo-500"><a href="/blog/blog_post/category/math/">Math 1st Paper</a></li>
+                    <li class="ml-5 text-indigo-500"><a href="/blog/blog_post/category/math-2nd-paper/">Math 2nd Paper</a></li>
+                </ul>
+            </div>
+
+
+            <div class="bg-gray-100 rounded-3xl p-5">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-xl text-gray-800 font-bold mb-3">🎯 Popular Posts</h1>
+                <a href="{% url 'blog_page' %}" class="text-indigo-700 hover:underline font-semibold text-sm">View all</a>
+                </div>
+                <ul class="mt-5 space-y-5 font-semibold text-md">
+                    {% for post in all_posts %}
+                    <hr class="h-[1px] border-0 bg-gray-300">
+                    <li><a href="/blog/blog_post/{{post.slug}}" class="flex justify-between relative overflow-auto rounded-lg items-center"> 
+                        <div>
+                            <div class="flex items-center space-x-2">
+                                <span><img src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/383978784_1020554685946620_4782391573070897955_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeHv_kQj7dKxkX2s2Y84VPT4LfO-DK_FOZst874Mr8U5m41QvVja84y9AZ-r4_GllhCwFXfnPVOtAgz9mTZH7qGt&_nc_ohc=DO3U-XUyvuwAX_FbOXp&_nc_ht=scontent.fdac138-1.fna&oh=00_AfDhbIm7LzWL-A_IR_JjsRNu4F6lJetBQE4FslwCuODO9w&oe=657BF795" alt="image" class="w-8 rounded-full"></span>
+                                <span class="text-sm font-normal">Asfakul Kabir</span>
+                                <span class="hidden lg:block">.</span> <span class="text-sm font-normal hidden lg:block">20 May, 2023</span>
+                            </div>
+                            <h1 class="my-2">{{ post.title }}</h1>
+                        </div>
+                        <img src="/{{ post.blog_image }}" alt="Blog image Kernel" class="w-16 h-20 object-cover hover:scale-110 transition-all duration-500 rounded-lg">
+                    </a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            </div>
+
+
+        </div>
+
+    </div>
+  </section>
+
+
+
+  <section class=" mx-auto w-full md:w-[95%] lg:w-[80%] px-5 md:px-10 py-10">    
+      <section >
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-md sm:text-center">
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Sign up for our newsletter</h2>
+                <p class="mx-auto mb-8 max-w-2xl  text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
+                <form action="#">
+                    <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+                        <div class="relative w-full">
+                            <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                                  <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                                  <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                               </svg>
+                            </div>
+                            <input class="block p-3 pl-9 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter your email" type="email" id="email" required="">
+                        </div>
+                        <div>
+                            <button type="submit" class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">We care about the protection of your data. <a href="#" class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy Policy</a>.</div>
+                </form>
+            </div>
+        </div>
+      </section>
+</section>
+ {% endblock content %}

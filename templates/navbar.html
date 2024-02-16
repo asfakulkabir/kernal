@@ -1,0 +1,154 @@
+  <!-- nav bar  -->
+  <header class="text-gray-900 body-font bg-white dark:bg-gray-900 mx-auto w-full md:w-[95%] lg:w-[80%] border-b dark:border-b-gray-700">
+    <div
+      class="md:w-[95%] lg:w-[90%] mx-auto flex flex-wrap flex-row justify-between items-center py-2 px-5 ">
+      <button id="theme-toggle" class="items-center flex flex-row text-gray-900">
+        <div class="flex flex-col justify-center">
+          <input type="checkbox" name="light-switch" class="light-switch sr-only" />
+          <label class="relative cursor-pointer p-2">
+            <svg id="theme-toggle-dark-icon" class="hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path class="fill-slate-900"
+                d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+              <path class="fill-slate-800"
+                d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path class="fill-gray-100"
+                d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+              <path class="fill-slate-200" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+            </svg>
+            <span class="sr-only">Switch to light / dark version</span>
+          </label>
+        </div>
+      </button>
+      <nav
+        class="flex flex-row justify-center items-center space-x-3 md:space-x-4 text-xs text-gray-900 dark:text-gray-100">
+
+        <a class="hover:text-black dark:hover:text-white">
+          <svg class="w-4 h-4 text-gray-800 dark:text-white inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+          </svg>
+          Facebook
+        </a>
+
+        <span>|</span>
+
+        <a class="hover:text-black dark:hover:text-white">
+          <svg class="w-4 h-4 text-gray-800 dark:text-white inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
+            <path fill-rule="evenodd" d="M19.7 3.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.84c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.84A4.225 4.225 0 0 0 .3 3.038a30.148 30.148 0 0 0-.2 3.206v1.5c.01 1.071.076 2.142.2 3.206.094.712.363 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.15 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965c.124-1.064.19-2.135.2-3.206V6.243a30.672 30.672 0 0 0-.202-3.206ZM8.008 9.59V3.97l5.4 2.819-5.4 2.8Z" clip-rule="evenodd"/>
+          </svg>
+          Youtube
+        </a>
+
+        <span>|</span>
+        <a class="hover:text-black dark:hover:text-white">
+          <svg class="w-4 h-4 text-gray-800 dark:text-white inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path fill="currentColor" d="M12.186 8.672 18.743.947h-2.927l-5.005 5.9-4.44-5.9H0l7.434 9.876-6.986 8.23h2.927l5.434-6.4 4.82 6.4H20L12.186 8.672Zm-2.267 2.671L8.544 9.515 3.2 2.42h2.2l4.312 5.719 1.375 1.828 5.731 7.613h-2.2l-4.699-6.237Z"/>
+          </svg>
+          
+          Twitter
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="bg-white dark:bg-gray-900 mx-auto w-full md:w-[95%] lg:w-[80%] z-40 sticky top-0 border-b dark:border-b-gray-700">
+    <div class="md:w-[95%] lg:w-[90%] flex flex-wrap items-center justify-between mx-auto px-4 py-2 ">
+      <a href="/" class="hidden dark:flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/static/images/dark_logo.png" class="h-12 lg:h-16" alt="Kernel Logo">
+      </a>
+      <a href="/" class="flex dark:hidden items-center space-x-3 rtl:space-x-reverse">
+        <img src="/static/images/light_logo.png" class="h-12 lg:h-16" alt="Kernel Logo">
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button data-popover-target="popover-user-profile" type="button"
+          class="font-medium flex space-x-2 items-center text-center text-md px-4 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            class="w-5 h-5 md:h-6 md:w-6 dark:text-primary-400">
+            <path
+              d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+          </svg>
+          <span class="dark:text-gray-200 text-sm md:text-md"> My Cart</span>
+        </button>
+
+        <!-- pop over cart  -->
+        <div data-popover id="popover-user-profile" role="tooltip"
+          class="absolute z-50 invisible inline-block w-64 text-gray-800 transition-opacity duration-500 ease-in bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-200 dark:bg-gray-800 dark:border-gray-600 p-5">
+          <div class="flex flex-col space-y-3">
+            <div class="flex flex-row space-x-2">
+              <img class="w-16" src="https://template.hasthemes.com/koparion/koparion/img/product/7.jpg" alt="Book">
+              <div class="flex flex-col">
+                <h1 class="text-md">Book name</h1>
+                <p class="text-sm text-primary-500 dark:text-primary-400">Qty: 1 | <span>Price: 500$</span></p>
+                <a class="text-red-500  mt-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor" class="w-5 h-5">
+                    <path fill-rule="evenodd"
+                      d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                      clip-rule="evenodd" />
+                  </svg></a>
+              </div>
+            </div>
+
+            <!-- 2nd boook  -->
+            <div class="flex flex-row space-x-2">
+              <img class="w-16" src="https://template.hasthemes.com/koparion/koparion/img/product/7.jpg" alt="Book">
+              <div class="flex flex-col">
+                <h1 class="text-md">Book name</h1>
+                <p class="text-sm text-primary-500 dark:text-primary-400">Qty: 1 | <span>Price: 500$</span></p>
+                <a class="text-red-500  mt-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor" class="w-5 h-5">
+                    <path fill-rule="evenodd"
+                      d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                      clip-rule="evenodd" />
+                  </svg></a>
+              </div>
+            </div>
+
+            <div class="flex flex-row justify-between text-gray-900 dark:text-gray-100 text-lg">
+              <p>Total:</p>
+              <p>1000$</p>
+            </div>
+            <a href="{% url 'cart' %}" class="w-full">
+            <button class="bg-gray-700 hover:bg-gray-900 text-white py-1 md:py-2 w-full">
+             View Cart
+            </button></a>   
+            <button class="bg-gray-700 text-white py-1 md:py-2">
+              Check Out
+            </button>
+          </div>
+          <div data-popper-arrow></div>
+        </div>
+      </div>
+
+      <button data-collapse-toggle="navbar-default" type="button"
+      class="dark:text-white text-gray-900 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden transition-all duration-500" 
+      aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15" />
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto transition-all duration-500" id="navbar-default">
+      <ul
+        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-200 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="{% url 'home' %}"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-700 md:border-0 hover:text-primary-300 transition-all duration-300 dark:text-white md:dark:hover:text-primary-300 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'about' %}"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-700 md:border-0 hover:text-primary-300 transition-all duration-300 dark:text-white md:dark:hover:text-primary-300 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-">About Us</a>
+        </li>
+        <li>
+          <a href="{% url 'blog_page' %}"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-700 md:border-0 hover:text-primary-300 transition-all duration-300 dark:text-white md:dark:hover:text-primary-300 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-">Blog Post</a>
+        </li>
+        <li>
+          <a href="{% url 'contact' %}"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-700 md:border-0 hover:text-primary-300 transition-all duration-300 dark:text-white md:dark:hover:text-primary-300 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
